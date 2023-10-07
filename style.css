@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    font-family: 'Roboto';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+    background: transparent;
+    padding: 0 20px;
+    position: fixed;
+}
+#navbar div h1{
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li:hover a{
+    background: #3183f5;
+    color: #fff;
+}
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li a{
+    padding: 8px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #eeeeee;
+    text-transform: uppercase;
+    display: block;
+    border-radius: 10px;
+}
+
+
+#home{
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-image: url('background.webp');
+    background-blend-mode: darken;
+    background-color: #00000099;
+    padding: 50px 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#home h2{
+    color: #fff;
+    text-align: center;
+    font-size: 39px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2px;
+
+}
+#home h2 span{
+    color: #3183f5;
+}
+#home p{
+    color: #cccccc;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.menubtn{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #navbar{
+        background: #3183f5;
+        height: 50px;
+    }
+    nav ul {
+        flex-direction: column;
+        background: #fff;
+        height: calc(100vh - 50px);
+        width: 70vw;
+        position: absolute;
+        top: 50px;
+        left: -70vw;
+        padding: 5px 10px; 
+        transition: 0.2s ease;
+    }
+    nav ul li a{
+        color: #333;
+        padding: 10px;
+    }
+    .menubtn{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .menubtn span{
+        background: 4px;
+        width: 25px;
+        background: #fff;
+        height: 3px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    nav .open{
+        left: 0;
+    }
+    #home h2{
+        font-size: 28px;
+    
+    }
+    #home{
+        padding: 30px 5%;
+    }
+  }
